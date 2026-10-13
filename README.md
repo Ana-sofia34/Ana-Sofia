@@ -64,13 +64,13 @@ Tengo un interés especial en el **desarrollo backend**, el **diseño y administ
 
 ## 🎓 Formación Académica
 
-**SENA (Servicio Nacional de Aprendizaje)**[cite: 1, 3]  
-*Tecnólogo en Análisis y Desarrollo de Software (ADSO)*[cite: 1, 3]  
-📍 Medellín, Colombia | En curso (Cuarto Trimestre)[cite: 1, 3]
+**SENA (Servicio Nacional de Aprendizaje)** 
+*Tecnólogo en Análisis y Desarrollo de Software (ADSO)*
+📍 Medellín, Colombia | En curso (Cuarto Trimestre)
 
 
 **SENA (Servicio Nacional de Aprendizaje)** 
-Técnico en programación de software 
+*Técnico en programación de software* 
 Medellín, Colombia | Certificado
 
 ---

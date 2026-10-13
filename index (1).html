@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Sofía Vanegas Ortega | Desarrolladora Junior</title>
+<meta name="description" content="Portafolio de Ana Sofía Vanegas Ortega, estudiante de Análisis y Desarrollo de Software (ADSO - SENA) en Medellín, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --c1:#EDE4D3; --c2:#C9B79C; --c3:#9C7A54; --c4:#6B4F3A; --c5:#3E2E22;
+  --bg:var(--c5);
+  --card:color-mix(in srgb,var(--c4) 42%,var(--c5));
+  --card-hi:color-mix(in srgb,var(--c4) 62%,var(--c5));
+  --line:color-mix(in srgb,var(--c3) 38%,transparent);
+  --text:var(--c1); --muted:var(--c2);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:
+    radial-gradient(700px 500px at 90% 0%,rgba(156,122,84,.28),transparent 70%),
+    radial-gradient(600px 500px at 0% 45%,rgba(107,79,58,.45),transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .93 0 0 0 0 .89 0 0 0 0 .83 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--c2);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* Nav */
+.nav{position:sticky;top:14px;z-index:20;display:flex;justify-content:center;padding:0 16px}
+.nav ul{display:flex;gap:4px;list-style:none;padding:6px;border-radius:999px;
+  background:color-mix(in srgb,var(--c5) 78%,transparent);backdrop-filter:blur(12px);
+  border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.28);overflow-x:auto;max-width:100%}
+.nav a{display:block;padding:8px 16px;border-radius:999px;font-size:.88rem;font-weight:500;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.nav a:hover{background:var(--c4);color:var(--c1)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:84px 0 72px}
+.hello{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:.88rem}
+.hello i{width:8px;height:8px;border-radius:50%;background:var(--c2);box-shadow:0 0 0 4px rgba(201,183,156,.2)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.7rem,6.4vw,5rem);line-height:1.02;letter-spacing:-.035em;margin:22px 0 20px}
+h1 span{display:block;color:var(--c2);font-weight:500;font-style:italic}
+.role{font-size:1.1rem;max-width:34ch;color:var(--c1)}
+.loc{margin-top:14px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.loc i{color:var(--c3)}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:14px;font-weight:600;font-size:.94rem;
+  border:1px solid var(--line);background:var(--card);transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-3px);border-color:var(--c2);background:var(--card-hi)}
+.btn i{color:var(--c2)}
+.btn.main{background:var(--c1);color:var(--c5);border-color:var(--c1)}
+.btn.main i{color:var(--c4)}
+.btn.main:hover{background:var(--c2)}
+
+/* Code window */
+.code{transform:rotate(1.6deg);border-radius:20px;background:color-mix(in srgb,var(--c5) 70%,#000);
+  border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 8px rgba(156,122,84,.1)}
+.bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--c4)}
+.bar i:nth-child(2){background:var(--c3)}.bar i:nth-child(3){background:var(--c2)}
+.bar b{margin-left:auto;font-weight:500;font-size:.78rem;color:var(--muted);font-family:ui-monospace,Menlo,Consolas,monospace}
+pre{padding:22px 22px 26px;font:500 .84rem/1.85 ui-monospace,Menlo,Consolas,monospace;color:var(--c1);overflow-x:auto}
+pre .l{display:block;opacity:0;animation:show .01s forwards;animation-delay:calc(var(--i)*.38s + .4s)}
+pre .k{color:var(--c3)}pre .s{color:var(--c2)}pre .p{color:var(--muted);opacity:.7}
+pre .caret{display:inline-block;width:8px;height:1em;background:var(--c2);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes show{to{opacity:1}}
+@keyframes blink{50%{opacity:0}}
+
+/* Sections */
+section{padding-top:84px}
+.head{display:flex;align-items:baseline;gap:18px;margin-bottom:34px;flex-wrap:wrap}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.025em;line-height:1.1}
+.head p{color:var(--muted);max-width:44ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+strong{font-weight:600;color:var(--c1)}
+
+/* Perfil bento */
+.bento{display:grid;grid-template-columns:1.5fr 1fr;gap:20px}
+.about p{color:#dfd3bd;max-width:62ch;font-size:1.04rem}
+.about p+p{margin-top:16px}
+.goal{background:var(--c1);color:var(--c5);border-color:var(--c1);display:flex;flex-direction:column;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
+.goal::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;border:34px solid rgba(156,122,84,.22)}
+.goal i{font-size:1.5rem;color:var(--c3)}
+.goal h3{font-family:var(--serif);font-size:1.5rem;line-height:1.2;margin-bottom:10px;letter-spacing:-.01em}
+.goal p{color:var(--c4);font-weight:500}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.sk{grid-column:span 3}
+.sk.wide{grid-column:span 4}.sk.narrow{grid-column:span 2}
+.sk h3{display:flex;align-items:center;gap:12px;font-size:1.02rem;font-weight:600;margin-bottom:20px}
+.sk h3 i{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--c4);color:var(--c1);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:12px;font-size:.88rem;font-weight:500;
+  background:color-mix(in srgb,var(--c5) 55%,transparent);border:1px solid var(--line);transition:all .2s;cursor:default}
+.tag i{color:var(--c2)}
+.tag:hover{background:var(--c1);color:var(--c5);border-color:var(--c1);transform:translateY(-2px) rotate(-1deg)}
+.tag:hover i{color:var(--c4)}
+.tag.soft{border-style:dashed;color:var(--muted)}
+
+/* Projects */
+.proj{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;margin-bottom:28px;padding:34px}
+.proj:nth-of-type(even){grid-template-columns:1fr 1.05fr}
+.proj:nth-of-type(even) .mock{order:2}
+.proj h3{font-family:var(--serif);font-size:1.7rem;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.proj p{color:#dfd3bd;margin-bottom:22px}
+.proj ul{list-style:none;display:grid;gap:8px;margin-bottom:24px;color:var(--muted);font-size:.93rem}
+.proj li{display:flex;gap:10px}.proj li i{color:var(--c3);margin-top:6px;font-size:.75rem}
+.proj .tag{font-size:.8rem;padding:5px 12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+
+/* Mock windows */
+.mock{border-radius:16px;background:var(--c1);color:var(--c5);overflow:hidden;box-shadow:0 22px 44px rgba(0,0,0,.4);transition:transform .35s}
+.proj:hover .mock{transform:translateY(-6px) rotate(-.8deg)}
+.mock .bar{background:var(--c2);border-color:rgba(62,46,34,.15);padding:11px 14px}
+.mock .bar i{background:var(--c4)}.mock .bar i:nth-child(2){background:var(--c3)}.mock .bar i:nth-child(3){background:var(--c5)}
+.mock .bar b{color:var(--c4)}
+.scr{padding:18px;min-height:230px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:14px}
+.cal span{aspect-ratio:1;border-radius:8px;background:rgba(156,122,84,.18)}
+.cal .on{background:var(--c4)}.cal .on2{background:var(--c3)}
+.row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:rgba(201,183,156,.45);margin-top:8px;font-size:.78rem;font-weight:600}
+.row i{width:22px;height:22px;border-radius:50%;background:var(--c4)}
+.row em{margin-left:auto;font-style:normal;color:var(--c4)}
+.shop{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.shop div{border-radius:10px;background:rgba(201,183,156,.45);padding:10px}
+.shop div::before{content:"";display:block;aspect-ratio:1.1;border-radius:8px;background:var(--c3);margin-bottom:8px}
+.shop div:nth-child(2)::before{background:var(--c4)}.shop div:nth-child(3)::before{background:var(--c2)}
+.shop b{display:block;height:6px;border-radius:3px;background:var(--c4);width:70%;margin-bottom:5px}
+.shop s{display:block;height:6px;border-radius:3px;background:var(--c3);width:40%}
+.cart{margin-top:12px;display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:10px;background:var(--c5);color:var(--c1);font-size:.78rem;font-weight:600}
+.beauty{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.beauty div{border-radius:12px;padding:14px;background:rgba(201,183,156,.45);display:flex;flex-direction:column;align-items:center;gap:10px}
+.beauty div::before{content:"";width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 32% 30%,var(--c1),var(--c3) 75%)}
+.beauty div:nth-child(2)::before{background:radial-gradient(circle at 32% 30%,var(--c2),var(--c4) 80%)}
+.beauty div:nth-child(3)::before{border-radius:18px;background:radial-gradient(circle at 32% 30%,var(--c1),var(--c4) 85%)}
+.beauty div:nth-child(4)::before{background:radial-gradient(circle at 32% 30%,var(--c2),var(--c5) 90%)}
+.beauty b{display:block;height:6px;border-radius:3px;background:var(--c4);width:60%}
+
+/* Education */
+.edu{display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.edu-l{display:flex;gap:22px;align-items:center}
+.edu-ic{flex:0 0 64px;height:64px;border-radius:20px;display:grid;place-items:center;background:var(--c1);color:var(--c4);font-size:1.6rem}
+.edu h3{font-family:var(--serif);font-size:1.4rem;line-height:1.2;letter-spacing:-.01em}
+.edu .sub{color:var(--c2);margin-top:4px}
+.edu .meta{margin-top:8px;color:var(--muted);font-size:.92rem;display:flex;gap:8px;align-items:center}
+.live{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:var(--c1);color:var(--c5);font-weight:600;font-size:.9rem}
+.live::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c3);box-shadow:0 0 0 4px rgba(156,122,84,.3)}
+
+/* Soft skills */
+.soft{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.si{grid-column:span 2}
+.si:nth-child(4),.si:nth-child(5){grid-column:span 3}
+.si i{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;margin-bottom:18px;background:var(--c4);color:var(--c1);font-size:1.1rem;transition:transform .25s,background .25s}
+.si:hover i{background:var(--c1);color:var(--c4);transform:rotate(-8deg)}
+.si h3{font-size:1.05rem;font-weight:600;margin-bottom:6px}
+.si p{color:var(--muted);font-size:.93rem}
+
+/* Contact CTA + footer */
+.cta{text-align:center;padding:56px 28px;background:linear-gradient(145deg,var(--c4),var(--card));}
+.cta h2{margin-bottom:12px}
+.cta p{color:var(--muted);max-width:46ch;margin:0 auto 28px}
+.cta .contact{justify-content:center;margin-top:0}
+footer{padding:44px 0 52px;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;gap:44px;padding-top:56px}
+  .code{transform:none;max-width:520px}
+  .bento{grid-template-columns:1fr}
+  .proj,.proj:nth-of-type(even){grid-template-columns:1fr;gap:28px}
+  .proj:nth-of-type(even) .mock{order:0}
+  .sk,.sk.wide,.sk.narrow{grid-column:span 6}
+  .si,.si:nth-child(4),.si:nth-child(5){grid-column:span 3}
+  .si:nth-child(5){grid-column:span 6}
+}
+@media (max-width:600px){
+  .wrap{padding:0 18px}
+  section{padding-top:64px}
+  .contact .btn{flex:1 1 100%;justify-content:center}
+  .card,.proj{padding:22px}
+  .si,.si:nth-child(4),.si:nth-child(5){grid-column:span 6}
+  .edu-l{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  pre .l{animation:none;opacity:1}.caret{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones">
+  <ul>
+    <li><a href="#perfil">Perfil</a></li>
+    <li><a href="#conocimientos">Conocimientos</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+  </ul>
+</nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="hello"><i></i> Disponible para prácticas y roles junior</span>
+    <h1>Ana Sofía <span>Vanegas Ortega</span></h1>
+    <p class="role">Estudiante de Análisis y Desarrollo de Software (ADSO - SENA) | Desarrolladora Junior</p>
+    <p class="loc"><i class="fa-solid fa-location-dot"></i> Medellín, Antioquia, Colombia</p>
+    <nav class="contact" aria-label="Contacto">
+      <a class="btn main" href="mailto:sofiavanor3012@gmail.com"><i class="fa-solid fa-envelope"></i> Escríbeme</a>
+      <a class="btn" href="https://wa.me/573136634153" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +57 313 663 4153</a>
+      <a class="btn" href="https://github.com/Ana-sofia34" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+    </nav>
+  </div>
+
+  <div class="code" aria-label="Resumen del perfil en formato de código">
+    <div class="bar"><i></i><i></i><i></i><b>ana.js</b></div>
+<pre><span class="l" style="--i:0"><span class="k">const</span> ana = {</span>
+<span class="l" style="--i:1">  rol: <span class="s">"Desarrolladora Junior"</span>,</span>
+<span class="l" style="--i:2">  estudia: <span class="s">"ADSO · SENA"</span>,</span>
+<span class="l" style="--i:3">  enfoque: [<span class="s">"Backend"</span>, <span class="s">"Bases de datos"</span>],</span>
+<span class="l" style="--i:4">  stack: [<span class="s">"Node.js"</span>, <span class="s">"Express"</span>, <span class="s">"PostgreSQL"</span>],</span>
+<span class="l" style="--i:5">  busca: <span class="s">"Prácticas o rol junior"</span>,</span>
+<span class="l" style="--i:6">  ciudad: <span class="s">"Medellín"</span></span>
+<span class="l" style="--i:7">};<span class="caret"></span></span></pre>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="perfil">
+    <div class="head"><h2>Perfil profesional</h2></div>
+    <div class="bento">
+      <div class="card about">
+        <p>Soy estudiante de cuarto trimestre del tecnólogo en <strong>Análisis y Desarrollo de Software (ADSO) en el SENA</strong>. Cuento con formación práctica en lógica de programación, desarrollo de aplicaciones web y gestión de bases de datos relacionales.</p>
+        <p>Me interesa el <strong>desarrollo backend</strong>, el <strong>diseño y administración de bases de datos</strong> y construir soluciones tecnológicas que resuelvan necesidades reales. Soy responsable, organizada, disciplinada y perseverante, y trabajo con la mirada puesta en la mejora continua.</p>
+      </div>
+      <div class="card goal">
+        <i class="fa-solid fa-bullseye"></i>
+        <div>
+          <h3>Objetivo profesional</h3>
+          <p>Vincularme a un equipo mediante prácticas formativas o roles junior para aportar a proyectos reales, consolidar mi perfil técnico y seguir creciendo profesionalmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conocimientos">
+    <div class="head"><h2>Conocimientos técnicos</h2><p>Lo que uso a diario en mis proyectos del SENA.</p></div>
+    <div class="skills">
+      <div class="card sk wide">
+        <h3><i class="fa-solid fa-laptop-code"></i> Lenguajes y web base</h3>
+        <div class="tags">
+          <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="tag"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="tag"><i class="fa-brands fa-java"></i> Java</span>
+        </div>
+      </div>
+      <div class="card sk narrow">
+        <h3><i class="fa-solid fa-database"></i> Bases de datos</h3>
+        <div class="tags">
+          <span class="tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+          <span class="tag"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="tag"><i class="fa-solid fa-table"></i> SQL</span>
+        </div>
+      </div>
+      <div class="card sk narrow">
+        <h3><i class="fa-solid fa-server"></i> Backend y frameworks</h3>
+        <div class="tags">
+          <span class="tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="tag"><i class="fa-solid fa-route"></i> Express.js</span>
+          <span class="tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span>
+          <span class="tag soft"><i class="fa-brands fa-react"></i> React (explorado)</span>
+        </div>
+      </div>
+      <div class="card sk wide">
+        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</h3>
+        <div class="tags">
+          <span class="tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="tag"><i class="fa-brands fa-github"></i> GitHub</span>
+          <span class="tag"><i class="fa-solid fa-terminal"></i> VS Code</span>
+          <span class="tag"><i class="fa-solid fa-diagram-project"></i> MySQL Workbench</span>
+          <span class="tag"><i class="fa-solid fa-gears"></i> pgAdmin</span>
+          <span class="tag"><i class="fa-solid fa-layer-group"></i> DBeaver</span>
+          <span class="tag"><i class="fa-solid fa-server"></i> XAMPP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="head"><h2>Proyectos académicos destacados</h2></div>
+
+    <article class="card proj">
+      <div>
+        <h3>Barbería Élite del Estilo</h3>
+        <p>Sistema de gestión de citas y usuarios para una barbería, con backend propio y base de datos relacional.</p>
+        <ul>
+          <li><i class="fa-solid fa-circle"></i> Roles de cliente, barbero y administrador</li>
+          <li><i class="fa-solid fa-circle"></i> Administración de servicios y agenda de citas</li>
+          <li><i class="fa-solid fa-circle"></i> Modelo entidad-relación y conexión con <code>pg</code></li>
+        </ul>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">Bootstrap</span></div>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i><b>agenda</b></div>
+        <div class="scr">
+          <div class="cal"><span></span><span class="on"></span><span></span><span class="on2"></span><span></span><span></span><span class="on"></span><span></span><span></span><span class="on2"></span><span></span><span class="on"></span><span></span><span></span></div>
+          <div class="row"><i></i> Corte clásico <em>10:00</em></div>
+          <div class="row"><i></i> Barba y perfilado <em>11:30</em></div>
+          <div class="row"><i></i> Corte y barba <em>14:00</em></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card proj">
+      <div>
+        <h3>Tienda Rápida</h3>
+        <p>E-commerce enfocado en la navegación interactiva de productos y en un flujo de compra claro.</p>
+        <ul>
+          <li><i class="fa-solid fa-circle"></i> Catálogo organizado de productos</li>
+          <li><i class="fa-solid fa-circle"></i> Carrito funcional guardado con <code>localStorage</code></li>
+          <li><i class="fa-solid fa-circle"></i> Módulo de resumen de pedidos</li>
+        </ul>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">localStorage</span><span class="tag">Bootstrap</span></div>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i><b>tienda</b></div>
+        <div class="scr">
+          <div class="shop"><div><b></b><s></s></div><div><b></b><s></s></div><div><b></b><s></s></div></div>
+          <div class="shop" style="margin-top:10px"><div><b></b><s></s></div><div><b></b><s></s></div><div><b></b><s></s></div></div>
+          <div class="cart"><span><i class="fa-solid fa-cart-shopping"></i> Tu pedido</span><span>Ver resumen</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card proj">
+      <div>
+        <h3>Pink Beauty</h3>
+        <p>Plataforma web para exhibir productos de belleza con una presentación visual limpia.</p>
+        <ul>
+          <li><i class="fa-solid fa-circle"></i> Catálogo adaptable a móvil y escritorio</li>
+          <li><i class="fa-solid fa-circle"></i> Maquetación y organización visual de componentes</li>
+          <li><i class="fa-solid fa-circle"></i> Elementos interactivos para mejorar la experiencia</li>
+        </ul>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span></div>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i><b>catálogo</b></div>
+        <div class="scr"><div class="beauty"><div><b></b></div><div><b></b></div><div><b></b></div><div><b></b></div></div></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="formacion">
+    <div class="head"><h2>Formación académica</h2></div>
+    <div class="card edu">
+      <div class="edu-l">
+        <div class="edu-ic"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h3>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</h3>
+          <p class="sub">SENA - Servicio Nacional de Aprendizaje</p>
+          <p class="meta"><i class="fa-solid fa-location-dot"></i> Medellín, Colombia</p>
+        </div>
+      </div>
+      <span class="live">En curso · 4.° trimestre</span>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="head"><h2>Habilidades destacadas</h2></div>
+    <div class="soft">
+      <div class="card si"><i class="fa-solid fa-clock"></i><h3>Gestión del tiempo</h3><p>Planeo mis tareas y cumplo las entregas en los plazos acordados.</p></div>
+      <div class="card si"><i class="fa-solid fa-shield-halved"></i><h3>Responsabilidad</h3><p>Compromiso con la calidad del trabajo y con superar los retos técnicos.</p></div>
+      <div class="card si"><i class="fa-solid fa-book-open-reader"></i><h3>Aprendizaje autónomo</h3><p>Exploro nuevas herramientas y tecnologías por iniciativa propia.</p></div>
+      <div class="card si"><i class="fa-solid fa-people-group"></i><h3>Trabajo en equipo</h3><p>Colaboro y me comunico con asertividad en entornos de desarrollo grupal.</p></div>
+      <div class="card si"><i class="fa-solid fa-magnifying-glass"></i><h3>Atención al detalle</h3><p>Rigor en el modelado de datos, la lógica de programación y el código limpio.</p></div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="card cta">
+      <h2>Trabajemos juntos</h2>
+      <p>Busco prácticas formativas o un rol junior donde pueda aportar y seguir aprendiendo.</p>
+      <div class="contact">
+        <a class="btn main" href="mailto:sofiavanor3012@gmail.com"><i class="fa-solid fa-envelope"></i> sofiavanor3012@gmail.com</a>
+        <a class="btn" href="https://wa.me/573136634153" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a class="btn" href="https://github.com/Ana-sofia34" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="year"></span> Ana Sofía Vanegas Ortega · Medellín, Colombia</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

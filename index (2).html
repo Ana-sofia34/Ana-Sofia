@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoja de vida | Ana Sofía Vanegas Ortega</title>
+<meta name="description" content="Hoja de vida de Ana Sofía Vanegas Ortega, estudiante de Análisis y Desarrollo de Software (ADSO - SENA) en Medellín, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --c1:#EDE4D3; --c2:#C9B79C; --c3:#9C7A54; --c4:#6B4F3A; --c5:#3E2E22;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{
+  font-family:var(--sans);line-height:1.6;color:var(--c5);
+  background:var(--c4);
+  background-image:radial-gradient(900px 500px at 50% -10%,var(--c3),transparent 70%);
+  padding:40px 16px 56px;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--c3);outline-offset:3px;border-radius:4px}
+
+/* Toolbar */
+.tools{max-width:980px;margin:0 auto 16px;display:flex;justify-content:flex-end}
+.print{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:10px;border:1px solid rgba(237,228,211,.4);
+  background:transparent;color:var(--c1);font:600 .85rem var(--sans);cursor:pointer;transition:background .2s,color .2s}
+.print:hover{background:var(--c1);color:var(--c5)}
+
+/* Sheet */
+.sheet{max-width:980px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;
+  background:var(--c1);border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+
+/* Sidebar */
+aside{background:var(--c5);color:var(--c1);padding:42px 28px}
+.photo{width:116px;height:116px;border-radius:50%;margin:0 auto 34px;display:grid;place-items:center;
+  font:700 2.4rem var(--serif);color:var(--c1);letter-spacing:-.02em;
+  background:var(--c4);border:3px solid var(--c3);box-shadow:0 0 0 7px rgba(156,122,84,.18)}
+aside h2{font:600 1.05rem var(--serif);letter-spacing:.01em;padding-bottom:9px;margin:30px 0 14px;border-bottom:1px solid rgba(201,183,156,.35);color:var(--c1)}
+aside h2:first-of-type{margin-top:0}
+.ct{list-style:none;display:grid;gap:13px;font-size:.88rem}
+.ct li{display:flex;gap:12px;align-items:flex-start;word-break:break-word}
+.ct i{width:16px;margin-top:4px;color:var(--c2);text-align:center}
+.ct a:hover{color:var(--c2);text-decoration:underline}
+.sg{margin-bottom:16px}
+.sg h3{font-size:.8rem;font-weight:600;color:var(--c2);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:.78rem;padding:3px 10px;border-radius:6px;background:rgba(107,79,58,.7);border:1px solid rgba(156,122,84,.5);transition:background .2s,color .2s}
+.chips span:hover{background:var(--c1);color:var(--c5)}
+.chips .lite{border-style:dashed;color:var(--c2);background:transparent}
+.soft{list-style:none;display:grid;gap:10px;font-size:.88rem}
+.soft li{display:flex;gap:10px;align-items:flex-start}
+.soft i{color:var(--c3);margin-top:5px;font-size:.7rem}
+
+/* Main */
+main{padding:46px 44px 44px}
+.top{padding-bottom:24px;border-bottom:3px solid var(--c5);margin-bottom:6px}
+h1{font:700 clamp(2rem,4.6vw,2.9rem)/1.06 var(--serif);letter-spacing:-.03em;color:var(--c5)}
+.title{margin-top:10px;color:var(--c4);font-weight:600;font-size:1rem}
+.where{margin-top:6px;font-size:.9rem;color:var(--c4);display:flex;gap:8px;align-items:center}
+.where i{color:var(--c3)}
+section{margin-top:28px}
+h2.s{display:flex;align-items:center;gap:12px;font:700 1.2rem var(--serif);letter-spacing:-.01em;color:var(--c5);margin-bottom:14px}
+h2.s i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--c5);color:var(--c1);font-size:.78rem}
+h2.s::after{content:"";flex:1;height:1px;background:var(--c2)}
+p.t{font-size:.95rem;color:#4f3b2c;max-width:68ch}
+p.t+p.t{margin-top:10px}
+.goal{margin-top:16px;padding:14px 18px;border-radius:8px;background:var(--c2);border-left:5px solid var(--c5);font-size:.93rem}
+.goal b{display:block;margin-bottom:2px;font-weight:700}
+
+/* Entries */
+.entry{position:relative;padding:0 0 20px 22px;border-left:2px solid var(--c2);margin-left:4px}
+.entry:last-child{padding-bottom:0}
+.entry::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--c3);border:2px solid var(--c1)}
+.entry h3{font-size:1.02rem;font-weight:700;line-height:1.35}
+.entry .stack{margin:2px 0 7px;font-size:.8rem;font-weight:600;color:var(--c3)}
+.entry ul{list-style:none;display:grid;gap:5px;font-size:.92rem;color:#4f3b2c}
+.entry li{position:relative;padding-left:16px}
+.entry li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--c4)}
+.entry .org{font-size:.9rem;color:var(--c4);font-weight:500}
+.entry .meta{margin-top:4px;font-size:.85rem;color:var(--c4);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.state{display:inline-block;padding:2px 10px;border-radius:999px;background:var(--c5);color:var(--c1);font-size:.76rem;font-weight:600}
+.state.ok{background:var(--c3)}
+
+/* Responsive */
+@media (max-width:820px){
+  .sheet{grid-template-columns:1fr}
+  aside{padding:34px 26px}
+  main{padding:34px 26px}
+  .tools{justify-content:center}
+}
+
+/* Print: A4 */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0}
+  .tools{display:none}
+  .sheet{max-width:none;border-radius:0;box-shadow:none;min-height:100vh;grid-template-columns:72mm 1fr}
+  aside{padding:12mm 7mm}
+  main{padding:12mm 10mm}
+  section{break-inside:avoid}
+  .entry{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="tools"><button class="print" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir o guardar en PDF</button></div>
+
+<div class="sheet">
+
+  <aside>
+    <div class="photo" aria-hidden="true">AV</div>
+
+    <h2>Contacto</h2>
+    <ul class="ct">
+      <li><i class="fa-solid fa-location-dot"></i><span>Medellín, Antioquia, Colombia</span></li>
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:sofiavanor3012@gmail.com">sofiavanor3012@gmail.com</a></li>
+      <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/573136634153" target="_blank" rel="noopener">+57 313 663 4153</a></li>
+      <li><i class="fa-brands fa-github"></i><a href="https://github.com/Ana-sofia34" target="_blank" rel="noopener">github.com/Ana-sofia34</a></li>
+    </ul>
+
+    <h2>Conocimientos técnicos</h2>
+    <div class="sg"><h3>Lenguajes y web base</h3>
+      <div class="chips"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Java</span></div></div>
+    <div class="sg"><h3>Backend y frameworks</h3>
+      <div class="chips"><span>Node.js</span><span>Express.js</span><span>Bootstrap 5</span><span class="lite">React (explorado)</span></div></div>
+    <div class="sg"><h3>Bases de datos</h3>
+      <div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>SQL</span></div></div>
+    <div class="sg"><h3>Herramientas</h3>
+      <div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span><span>MySQL Workbench</span><span>pgAdmin</span><span>DBeaver</span><span>XAMPP</span></div></div>
+
+    <h2>Habilidades destacadas</h2>
+    <ul class="soft">
+      <li><i class="fa-solid fa-circle"></i>Gestión del tiempo</li>
+      <li><i class="fa-solid fa-circle"></i>Responsabilidad</li>
+      <li><i class="fa-solid fa-circle"></i>Aprendizaje autónomo</li>
+      <li><i class="fa-solid fa-circle"></i>Trabajo en equipo</li>
+      <li><i class="fa-solid fa-circle"></i>Atención al detalle</li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="top">
+      <h1>Ana Sofía Vanegas Ortega</h1>
+      <p class="title">Estudiante de Análisis y Desarrollo de Software (ADSO - SENA) | Desarrolladora Junior</p>
+      <p class="where"><i class="fa-solid fa-location-dot"></i> Medellín, Antioquia, Colombia</p>
+    </div>
+
+    <section>
+      <h2 class="s"><i class="fa-solid fa-user"></i> Perfil profesional</h2>
+      <p class="t">Estudiante de cuarto trimestre del tecnólogo en <strong>Análisis y Desarrollo de Software (ADSO) en el SENA</strong>, con formación práctica en lógica de programación, desarrollo de aplicaciones web y gestión de bases de datos relacionales.</p>
+      <p class="t">Me interesa el desarrollo backend, el diseño y administración de bases de datos y la construcción de soluciones tecnológicas que resuelvan necesidades reales. Soy responsable, organizada, disciplinada y perseverante, enfocada en la mejora continua y el cumplimiento de objetivos.</p>
+      <div class="goal"><b>Objetivo profesional</b>Vincularme a un equipo de trabajo mediante prácticas formativas o roles junior que me permitan aportar a proyectos reales, consolidar mi perfil técnico y continuar mi crecimiento profesional.</div>
+    </section>
+
+    <section>
+      <h2 class="s"><i class="fa-solid fa-diagram-project"></i> Proyectos académicos destacados</h2>
+
+      <div class="entry">
+        <h3>Barbería Élite del Estilo</h3>
+        <p class="stack">Node.js · Express.js · PostgreSQL · Bootstrap · HTML · CSS · JavaScript</p>
+        <ul>
+          <li>Sistema de gestión de citas y usuarios con roles de cliente, barbero y administrador.</li>
+          <li>Administración de servicios y agenda de citas.</li>
+          <li>Diseño del modelo entidad-relación y conexión a PostgreSQL con el controlador <code>pg</code>.</li>
+          <li>Backend con Node.js y Express, e interfaces responsivas.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Tienda Rápida</h3>
+        <p class="stack">HTML · CSS · JavaScript · Bootstrap · localStorage</p>
+        <ul>
+          <li>Aplicación de comercio electrónico con catálogo de productos, carrito funcional y resumen de pedidos.</li>
+          <li>Persistencia del carrito en el navegador con <code>localStorage</code>.</li>
+          <li>Interfaz adaptable a distintos tamaños de pantalla.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>Pink Beauty</h3>
+        <p class="stack">HTML · CSS · JavaScript · Bootstrap</p>
+        <ul>
+          <li>Plataforma web para la presentación comercial de productos de belleza.</li>
+          <li>Catálogo con maquetación adaptable a móvil y escritorio.</li>
+          <li>Organización visual de componentes y elementos interactivos para mejorar la experiencia de uso.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="s"><i class="fa-solid fa-graduation-cap"></i> Formación académica</h2>
+
+      <div class="entry">
+        <h3>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</h3>
+        <p class="org">SENA - Servicio Nacional de Aprendizaje</p>
+        <p class="meta"><span><i class="fa-solid fa-location-dot"></i> Medellín, Colombia</span><span class="state">En curso · 4.° trimestre</span></p>
+      </div>
+
+      <div class="entry">
+        <h3>Técnico en Programación de Software</h3>
+        <p class="org">SENA - Servicio Nacional de Aprendizaje</p>
+        <p class="meta"><span><i class="fa-solid fa-location-dot"></i> Medellín, Colombia</span><span class="state ok">Certificado</span></p>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+</body>
+</html>

@@ -62,18 +62,17 @@ Tengo un interés especial en el **desarrollo backend**, el **diseño y administ
 
 ---
 
-## 🎓 Formación Académica
+##  Formación Académica
 
 **SENA (Servicio Nacional de Aprendizaje)**  
 *Tecnólogo en Análisis y Desarrollo de Software (ADSO)*  
 📍 Medellín, Colombia | En curso (Cuarto Trimestre)
 
----
 
-## 🌟 Habilidades Personales
+##  Habilidades Personales
 
-- ⏱️ **Organización y gestión del tiempo:** Capacidad para planificar tareas y cumplir con entregas en tiempos establecidos.
-- 🎯 **Responsabilidad y perseverancia:** Compromiso constante con la calidad del trabajo y la superación de retos técnicos.
-- 📖 **Aprendizaje autónomo:** Disposición permanente para explorar nuevas herramientas y tecnologías.
-- 🤝 **Trabajo en equipo:** Colaboración efectiva y comunicación asertiva en entornos de desarrollo grupal.
-- 🔍 **Atención al detalle:** Rigor en el modelado de datos, la lógica de programación y el diseño de código limpio.
+-  **Organización y gestión del tiempo:** Capacidad para planificar tareas y cumplir con entregas en tiempos establecidos.
+-  **Responsabilidad y perseverancia:** Compromiso constante con la calidad del trabajo y la superación de retos técnicos.
+-  **Aprendizaje autónomo:** Disposición permanente para explorar nuevas herramientas y tecnologías.
+-  **Trabajo en equipo:** Colaboración efectiva y comunicación asertiva en entornos de desarrollo grupal.
+-  **Atención al detalle:** Rigor en el modelado de datos, la lógica de programación y el diseño de código limpio.

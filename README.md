@@ -75,10 +75,26 @@ Medellín, Colombia | Certificado
 
 ---
 
-## 🌟 Habilidades Personales
+##  Habilidades Personales
 
 - **Organización y gestión del tiempo:** Capacidad para planificar tareas y cumplir con entregas en tiempos establecidos.
 - **Responsabilidad y perseverancia:** Compromiso constante con la calidad del trabajo y la superación de retos técnicos.
 - **Aprendizaje autónomo:** Disposición permanente para explorar nuevas herramientas y tecnologías.
 - **Trabajo en equipo:** Colaboración efectiva y comunicación asertiva en entornos de desarrollo grupal.
 - **Atención al detalle:** Rigor en el modelado de datos, la lógica de programación y el diseño de código limpio.
+
+
+**📊 Estadísticas de GitHub**
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=lillystarfull&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true&locale=es" alt="Estadísticas de GitHub" height="180"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lillystarful&layout=compact&theme=tokyonight&hide_border=true&locale=es" alt="Lenguajes más utilizados" height="180"/>
+</p>
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=lillystarful&theme=tokyonight&hide_border=true&locale=es" alt="Racha de contribuciones de GitHub"/> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=lillystarful&style=for-the-badge&color=blueviolet" alt="Visitas al perfil"/> </p>
+
+
+
+https://promptsa.com/es/services/ai-prompt-optimizer
+
+
+
+
